@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
+
+        <link rel="stylesheet" href="resources/css/global.css" />
+        <link rel="stylesheet" href="resources/css/components/card.css" />
+        <link rel="stylesheet" href="resources/css/components/stats.css" />
+        <link rel="stylesheet" href="resources/css/components/badge.css" />
+        <link rel="stylesheet" href="resources/css/components/input.css" />
+        <link rel="stylesheet" href="resources/css/components/header.css" />
+        <link rel="stylesheet" href="resources/css/components/button.css" />
+        <link rel="stylesheet" href="resources/css/components/heading.css" />
+        <link rel="stylesheet" href="resources/css/components/table.css" />
+        <link rel="stylesheet" href="resources/css/components/switch.css" />
+        <link rel="stylesheet" href="resources/css/components/hamburgers.css" />
+        <link rel="stylesheet" href="resources/css/components/form.css" />
+        <link rel="stylesheet" href="resources/css/layouts/buttongroup.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="https://kit.fontawesome.com/048645d981.js" crossorigin="anonymous"></script>
+
+        <title>KIDZONE | Year </title>
+
+        <!-- Start of ChatBot (www.chatbot.com) code -->
+        <script type="text/javascript">
+            window.__be = window.__be || {};
+            window.__be.id = "60adc444ac852f0007859d3f";
+            (function () {
+                var be = document.createElement('script'); be.type = 'text/javascript'; be.async = true;
+                be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
+            })();
+        </script>
+        <!-- End of ChatBot code -->
+    </head>
+    <body>
+        <div class="header">
+            <div class="menu">
+                <div class="left">
+                   <span class="header-small" style="color: white; font-size: 50px;"><a href="student.html">KIDZONE</a></span> 
+                    <div id="hamburger" class="hamburger hamburger--spin" onclick="openMenu()">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </div>
+                    <nav id="menu">
+                        <ul>
+                            <li><a href="student.html" >Home</a></li>
+                            <li><a href="instructor.html">Instructor</a></li>
+                            <li>
+                                <a href="course.html" class="active">Course<i class="fas fa-caret-down"></i> </a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="year.html">Year</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li style="white-space: nowrap;"><a href="aboutus.html">About Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <a class="navbar-brand" href="#"><i class="fa fa-sign-out" style="font-size:30px"></i></a>
+            </div>
+        </div>
+
+        <div class="body" style="margin-top: 10%;">
+                <div class="btn-group">
+                <div class="center">
+                  <a href="course.html"><button class="button white">Year 1</button></a> &nbsp;
+                  <a href="#"><button class="button white">Year 2</button></a> &nbsp;
+                  <a href="#"><button class="button white">Year 3</button></a> &nbsp;
+                  <a href="#"><button class="button white">Year 4</button></a> &nbsp;
+                  <a href="#"><button class="button white">Year 5</button></a> &nbsp;
+                  <a href="#"><button class="button white">Year 6</button></a> &nbsp;
+                </div>
+                </div>
+                
+                       
+        </div>
+
+        <script>
+            function openMenu() {
+                var menu = document.getElementById("menu");
+                var hamburger = document.getElementById("hamburger");
+                if (menu.classList && hamburger.classList) {
+                    menu.classList.toggle("open");
+                    hamburger.classList.toggle("is-active");
+                }
+            }
+        </script>
+
+
+    </body>
+</html>
