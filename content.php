@@ -3,9 +3,19 @@ include "resources/conn.php";
 session_start();
 
 $instructor_id = 1;
-$student_id = $_SESSION['student_id'];
+
+$student_id = '';
+
 
 $subject_enrolled_completed = '';
+
+if (!isset($_SESSION['student_id'])) {
+  echo '<script>alert("Please Login");</script>';
+  echo "<script>window.location.assign('student.php')</script>";
+} else {
+  $student_id = $_SESSION['student_id'];
+}
+
 
 if (isset($_GET['content'])) {
   $_SESSION['content'] = $_GET['content'];
@@ -28,10 +38,6 @@ if (isset($_GET['content'])) {
 }
 
 
-if (!isset($_SESSION['student_id'])) {
-  echo '<script>alert("Please Login");</script>';
-  echo "<script>window.location.assign('student.php')</script>";
-}
 
 
 

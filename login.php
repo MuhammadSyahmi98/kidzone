@@ -7,8 +7,9 @@ if (isset($_POST['login'])) {
   $email = $_POST['student_email'];
   $password = $_POST['student_passwod'];
 
-  $sql = "SELECT * FROM student where student_email = '$email' and student_passwod = '$password'";
-  $result = $conn->query($sql);
+   $sql12 = "SELECT * FROM student WHERE student_email = '". $email ."' AND student_passwod = '". $password ."'";
+   $result = $conn->query($sql12);
+   
 
   if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
@@ -17,7 +18,6 @@ if (isset($_POST['login'])) {
     $student_id = $row['student_id'];
     session_start();
     $_SESSION['student_id'] = $student_id;
-
     echo '<script>alert("Welcome to KIDZONE!");</script>';
     echo "<script>window.location.assign('student.php')</script>";
   } else {

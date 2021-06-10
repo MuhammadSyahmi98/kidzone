@@ -33,7 +33,7 @@ if(isset($_POST['save'])){
         $status = 'Not Completed';
 
         // Temporary instructor_id 
-        $instructor_id = 1;
+        $instructor_id = $_SESSION['instructor_id'];
 
         // Create User and store data in database
         $stmt = $conn->prepare("INSERT INTO content (content_subject_name, content_level, content_description, content_created, content_status, instructor_id) VALUES (?, ?, ?, ?, ?, ?)");
