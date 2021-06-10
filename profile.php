@@ -26,6 +26,27 @@ $student_id = $_SESSION['student_id'];
 // echo $_SESSION['student_ic'];
 // echo $_SESSION['student_passwod'];
 //}
+
+
+if (isset($_POST['update'])) {
+    $student_id = $_POST['id'];
+    $student_name = $_POST['name'];
+    $student_email = $_POST['email'];
+    $student_ic = $_POST['ic'];
+
+    $sql = "UPDATE student SET student_name = '" . $student_name . "', student_email = '" . $student_email . "', student_ic = '" . $student_ic . "' WHERE student_id = " . $student_id . "";
+
+    if ($conn->query($sql) === TRUE) {
+        echo '<script>alert("Success Update.");</script>';
+        echo "<script>window.location.assign('profile.php')</script>";
+    } else {
+        echo "Error updating record: " . $conn->error;
+    }
+}
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -123,7 +144,7 @@ $student_id = $_SESSION['student_id'];
 
 <body>
     <div class="header">
-         <?php include('header.php'); ?>
+        <?php include('header.php'); ?>
     </div>
 
     <?php
@@ -131,12 +152,12 @@ $student_id = $_SESSION['student_id'];
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        while ($row=$result->fetch_assoc()) {
+        while ($row = $result->fetch_assoc()) {
             $id = $row['student_id'];
             $name = $row['student_name'];
             $email = $row['student_email'];
             $ic = $row['student_ic'];
-            $pass = $row['student_passwod'];
+
 
 
 
@@ -144,12 +165,26 @@ $student_id = $_SESSION['student_id'];
 
             <div class="body">
                 <div class="card">
-                    <label><b>Name: <?php echo $name; ?></b></label><br>
-                    <label><b>Email: <?php echo $email; ?></b></label><br>
-                    <label><b>IC Number: <?php echo $ic; ?></b></label><br>
-                    <button><a href="profile.php?student_id=<?php echo $student_id; ?>">Update</a></button>
+                    <form method="POST">
+                        <input type="hidden" name="id" value="<?php echo $id; ?>">
+                        <div style="margin-bottom: 10px;">
+                            <label><b>Name: <input name="name" value="<?php echo $name; ?>"></b></label><br>
+                        </div>
 
+                        <div style="margin-bottom: 10px;">
+                            <label style="margin-bottom: 10px;"><b>Email: <input name="email" value=" <?php echo $email; ?>"></b></label><br>
+
+                        </div>
+
+                        <div style="margin-bottom: 10px;">
+                            <label style="margin-bottom: 10px;"><b>IC Number: <input name="ic" value="<?php echo $ic; ?>"></b></label><br>
+
+                        </div>
+
+                        <button name="update" style="margin-bottom: 10px;">Update</button>
+                    </form>
                 </div>
+
 
             <?php
         }
