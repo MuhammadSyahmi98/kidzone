@@ -2,11 +2,17 @@
 include "../resources/conn.php";
 session_start();
 
+if(!isset($_SESSION['instructor_id'])){
+    echo '<script>alert("Please Login");</script>';
+    echo "<script>window.location.assign('../login2.php')</script>";
+}
+
+
 $name = $ic = $email = $phone = $quote = $path = '';
 
 $isAllOkay = true;
 
-$instructor_id = 1;
+$instructor_id = $_SESSION['instructor_id'];
 
 
 $sql100 = "SELECT * FROM instructor WHERE instructor_id = ". $instructor_id ."";

@@ -1,3 +1,3 @@
 <?php
-header('location: student.html');
+header('location: student.php');
 ?>

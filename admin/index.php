@@ -90,6 +90,12 @@ if ($result->num_rows > 0) {
                                 <span class="nav-link-text">Manage Instructor</span>
                             </a>
                         </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="senaraipelajar.php">
+                                <span class="feather-icon"><i data-feather="activity"></i></span>
+                                <span class="nav-link-text">Student</span>
+                            </a>
+                        </li>
 
                     </ul>
                 </div>
@@ -157,10 +163,50 @@ if ($result->num_rows > 0) {
                     </div>
                 </div>
                 <section class="hk-sec-wrapper">
-                    <h6 class="hk-sec-title">Pecentage</h6>
+                    <h6 class="hk-sec-title">New Student</h6>
                     <div class="row">
                         <div class="col-sm">
-                            <div id="e_chart_4" class="echart" style="height:400px;"></div>
+                        <div class="table-wrap">
+    
+                                        <table id="datable_1" class="table table-hover w-100  pb-30">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>IC No.</th>
+                                                    <th>Email</th>
+                                                    <th>Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php
+                                                $lastWeek = date("Y-m-d", strtotime("-7 days"));
+                                                $sql = "SELECT * FROM student WHERE student_date >= '". $lastWeek ."'";
+                                                $result = $conn->query($sql);
+
+                                                if ($result->num_rows > 0) {
+                                                    while ($row = $result->fetch_assoc()) { ?>
+                                                        <tr>
+                                                            <td><?php echo $row['student_name'] ?></td>
+                                                            <td><?php echo $row['student_ic'] ?></td>
+                                                            <td><?php echo $row['student_email'] ?></td>
+                                                            <?php
+                                                            $orgDate = $row['student_date'];
+                                                            $newDate = date("d-m-Y", strtotime($orgDate));
+                                                           
+                                                            ?>
+                                                            <td><?php echo $newDate ?></td>
+                                                    
+
+                                                        </tr>
+                                                <?php
+                                                    }
+                                                }
+                                                ?>
+
+                                            </tbody>
+
+                                        </table>
+                                    </div>
                         </div>
                     </div>
                 </section>

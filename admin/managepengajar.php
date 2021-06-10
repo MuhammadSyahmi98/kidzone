@@ -1,5 +1,6 @@
 <?php
 include "../resources/conn.php";
+session_start();
 
 $name = $ic = $phone = $email = $qualification = $file_temp = '';
 $displayError =  false;
@@ -176,6 +177,12 @@ if (isset($_POST['update'])) {
                             <a class="nav-link" href="senaraipengajar.php">
                                 <span class="feather-icon"><i data-feather="activity"></i></span>
                                 <span class="nav-link-text">Manage Instructor</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="senaraipelajar.php">
+                                <span class="feather-icon"><i data-feather="activity"></i></span>
+                                <span class="nav-link-text">Student</span>
                             </a>
                         </li>
 

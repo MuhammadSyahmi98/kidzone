@@ -3,7 +3,13 @@
 include "../resources/conn.php";
 session_start();
 
-$instructor_id = 1;
+if(!isset($_SESSION['instructor_id'])){
+    echo '<script>alert("Please Login");</script>';
+    echo "<script>window.location.assign('../login2.php')</script>";
+}
+
+
+$instructor_id = $_SESSION['instructor_id'];
 
 $sql100 = "SELECT * FROM instructor WHERE instructor_id = ". $instructor_id ."";
 $result100  = $conn->query($sql100 );
@@ -171,7 +177,7 @@ if (isset($_POST['add'])) {
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                $sql = "SELECT *  FROM content WHERE instructor_id = 1";
+                                                $sql = "SELECT *  FROM content WHERE instructor_id = ". $instructor_id ."";
                                                 $result = $conn->query($sql);
                                                 if ($result->num_rows > 0) {
                                                     while ($row = $result->fetch_assoc()) { ?>

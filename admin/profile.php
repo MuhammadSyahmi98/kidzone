@@ -6,7 +6,7 @@ $name = $ic = $email = $phone = '';
 
 $isAllOkay = true;
 
-$staff_id = 1;
+$staff_id = $_SESSION['staff_id'];
 
 $sql = "SELECT * FROM staff WHERE staff_id = " . $staff_id . "";
 $result = $conn->query($sql);
@@ -146,6 +146,12 @@ if (isset($_POST['update'])) {
                             <a class="nav-link" href="senaraipengajar.php">
                                 <span class="feather-icon"><i data-feather="activity"></i></span>
                                 <span class="nav-link-text">Manage Instructor</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="senaraipelajar.php">
+                                <span class="feather-icon"><i data-feather="activity"></i></span>
+                                <span class="nav-link-text">Student</span>
                             </a>
                         </li>
 
