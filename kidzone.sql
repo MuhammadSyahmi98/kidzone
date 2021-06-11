@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 10, 2021 at 04:26 AM
+-- Generation Time: Jun 11, 2021 at 03:06 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `content` (
   `content_id` int(11) NOT NULL,
-  `content_img` varchar(80) NOT NULL,
+  `content_img` varchar(80) DEFAULT NULL,
   `content_subject_name` varchar(30) NOT NULL,
   `content_level` varchar(30) NOT NULL,
   `content_description` varchar(255) NOT NULL,
@@ -44,8 +44,8 @@ CREATE TABLE `content` (
 --
 
 INSERT INTO `content` (`content_id`, `content_img`, `content_subject_name`, `content_level`, `content_description`, `content_created`, `content_updated`, `content_status`, `instructor_id`) VALUES
-(1, 'bm1.png', 'Bahasa Melayu', '1', 'Bahasa Melayu is one of the dialects of the hundreds of other dialects found in Nusantara (the Malay world). Selection of the Malay language as the national language whether in Indonesia, Malaysia and Brunei are not made arbitrarily. It was chosen mainly ', '2021-08-08', '2021-06-09', 'Not Completed', 1),
-(2, 'bi1.jpg', 'Bahasa Inggeris', '1', 'Bahasa Inggeris is a West Germanic language that is the dominant language in the United Kingdom, the United States, most Commonwealth countries including Australia and Canada, and other former British colonies. It is also the dominant or official language', '2021-08-08', '2021-08-08', 'Not Completed', 2),
+(1, 'bm1.png', 'Bahasa Melayu', '1', 'Bahasa Melayu is one of the dialects of the hundreds of other dialects found in Nusantara (the Malay world). Selection of the Malay language as the national language whether in Indonesia, Malaysia and Brunei are not made arbitrarily. It was chosen mainly ', '2021-08-08', '2021-06-10', 'Not Completed', 1),
+(2, 'bi1.jpg', 'Bahasa Inggeris', '1', 'Bahasa Inggeris is a West Germanic language that is the dominant language in the United Kingdom, the United States, most Commonwealth countries including Australia and Canada, and other former British colonies. It is also the dominant or official language', '2021-08-08', '2021-06-10', 'Not Completed', 2),
 (3, 'sc1.jpg', 'Science & Technology', '1', 'Science encompasses the systematic study of the structure and behaviour of the physical and natural world through observation and experiment, and technology is the application of scientific knowledge for practical purposes. ', '2021-08-08', '2021-08-08', 'Not Completed', 3),
 (4, 'pjk1.jpg', 'Physical education and Health', '1', 'Physical Education is education through the physical. It aims to develop students’ physical competence and knowledge of movement and safety, and their ability to use these to perform in a wide range of activities associated with the development of an ac', '2021-08-08', '2021-08-08', 'Not Completed', 4),
 (5, 'pii1.jpg', 'Pendidikan Islam', '1', 'Islamic education is built to meet the needs of Islamic education in a holistic, integrated and evolving as well as is authentic in line with the requirements of the National Philosophy of Education and the Philosophy of Islamic Education introduced in th', '2021-08-08', '2021-08-08', 'Not Completed', 5),
@@ -102,7 +102,7 @@ CREATE TABLE `instructor` (
 --
 
 INSERT INTO `instructor` (`instructor_id`, `instructor_name`, `instructor_email`, `instructor_password`, `instructor_ic`, `instructor_phone_number`, `instructor_quotes`, `instructor_qualification`, `instructor_pic_path`, `instructor_path_file`) VALUES
-(1, 'Aishah binti Karim', 'aishah95@gmail.com', 'aish123', '950505075016', '0123456781', 'The best teachers teach from the heart, not from the book', 'Degree', 'default.png', 'B031810288_mind_mapping_920606023438.pdf'),
+(1, 'Aishah binti Karim', 'aishah95@gmail.com', 'aish123', '950505075016', '0123456781', 'The best teachers teach from the heart, not from the book', 'Degree', '1923152308_950505075016.jpg', 'B031810288_mind_mapping_920606023438.pdf'),
 (2, 'Alya Farissa Binti Azman', 'alya@gmail.com', 'alya123', '920101032088', '0197863524', 'Remember that failure is an event, not a person', 'Degree', 'default.png', 'B031810288_mind_mapping_920606023438.pdf'),
 (3, 'Priya Kanchini ', 'piya@gmail.com', 'piya123', '900501075034', '0178553243', 'Education is not the filling of a pail, but the lighting of a fire', 'Degree', 'default.png', 'B031810288_mind_mapping_920606023438.pdf'),
 (4, 'Muhammad Farid Bin Jayatan', 'farid@gmail.com', 'farid123', '900605025817', '0126745821', 'When one teaches, two learn', 'Degree', 'default.png', 'B031810288_mind_mapping_920606023438.pdf'),
@@ -182,7 +182,9 @@ CREATE TABLE `section` (
 
 INSERT INTO `section` (`section_id`, `section_number`, `section_name`, `section_created`, `content_id`) VALUES
 (12, 1, 'Introduction', '2021-06-09', 1),
-(13, 2, 'Part 2', '2021-06-09', 1);
+(13, 2, 'Part 2', '2021-06-09', 1),
+(14, 1, 'Part 1', '2021-06-10', 2),
+(15, 3, 'Part 3', '2021-06-10', 1);
 
 -- --------------------------------------------------------
 
@@ -205,7 +207,10 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`staff_id`, `staff_name`, `staff_email`, `staff_ic`, `staff_phone_number`, `staff_password`, `staff_pic_path`) VALUES
-(1, 'Muhammad Syahmi Bin Abdul Jalil', 'syahmijalil12@gmail.com', '990422-02-5095', '012-6518626', 'QTJMUiVa', '63009297_990422-02-5095.jpg');
+(1, 'Muhammad Syahmi Bin Abdul Jalil', 'syahmijalil12@gmail.com', '990422-02-5095', '012-6518626', 'QTJMUiVa', '1482253955_990422-02-5095.jpg'),
+(2, 'Abdul Manan Bin Surpin', 'admin@gmail.com', '600402-01-4734', '012-6518624', 'bpO0JT6l', 'default.png'),
+(3, 'Fatimah Atan', 'admin2@gmail.com', '600402-01-4243', '012-6324535', 'SDQP1Zmq', 'default.png'),
+(5, 'Zaharah Binti Atan', 'attendancesystem.my@gmail.com', '600402-01-4721', '012-6518624', '4SAecIqP', 'default.png');
 
 -- --------------------------------------------------------
 
@@ -228,7 +233,8 @@ CREATE TABLE `student` (
 
 INSERT INTO `student` (`student_id`, `student_name`, `student_email`, `student_passwod`, `student_ic`, `student_date`) VALUES
 (1, 'Ahmad', 'ahamd@gmail.com', '12345', '001202-02-8723', '2021-06-01'),
-(2, 'Muhammad Syahmi', 'syahmijalil@gmail.com', '12345', '001202-02-8722', '2021-06-10');
+(2, 'Muhammad Atan', 'syahmijalil@gmail.com', '12345', '001202-02-8722', '2021-06-10'),
+(3, 'Abdul Jalil', 'abduljalil@gmail.com', '12345', '120202-02-5422', NULL);
 
 -- --------------------------------------------------------
 
@@ -251,7 +257,7 @@ CREATE TABLE `subject_enrolled` (
 
 INSERT INTO `subject_enrolled` (`subject_enrolled_id`, `subject_enrolled_created`, `subject_enrolled_status`, `subject_enrolled_completed`, `student_id`, `content_id`) VALUES
 (1, '2021-06-09', 'Not Completed', '1', 1, 1),
-(3, '2021-06-09', 'Not Completed', '2', 2, 1),
+(3, '2021-06-09', 'Not Completed', '3', 2, 1),
 (4, '2021-06-10', 'Not Completed', '1', 2, 18);
 
 --
@@ -331,19 +337,19 @@ ALTER TABLE `resources`
 -- AUTO_INCREMENT for table `section`
 --
 ALTER TABLE `section`
-  MODIFY `section_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `section_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `staff_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `staff_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `subject_enrolled`
