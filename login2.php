@@ -324,15 +324,29 @@ if (isset($_POST['login'])) {
             <br><br>
             <h1>Login Instructor/Staff</h1><br><br>
             <label style="float: left; padding-left:45px"><b>Email Address</b></label><br>
-            <input type="email" placeholder="Enter Email Address" name="student_email" required><br>
+            <input id="username" type="email" placeholder="Enter Email Address" name="student_email" required><br>
             <label style="float: left; padding-left:45px"><b>Password</b></label><br>
-            <input type="password" placeholder="Enter Password" name="student_passwod" required><br>
+            <input id="password" type="password" placeholder="Enter Password" name="student_passwod" required><br>
             <button type="submit" name="login" class="loginbtn">NEXT</button>
           </form>
+          <button style="width: 50%;" onclick="btn1()" class="loginbtn" >Staff 1</button>
+          <button style="width: 50%;" onclick="btn2()" class="loginbtn" >Instructor 1</button>
         </div>
       </div>
     </div>
   </div>
+
+  <script>
+    function btn1() {
+      document.getElementById("username").value = "syahmijalil12@gmail.com";
+      document.getElementById("password").value = "QTJMUiVa";
+    }
+    function btn2() {
+      document.getElementById("username").value = "aishah95@gmail.com";
+      document.getElementById("password").value = "aish123";
+    }
+  </script>
+
 
 
   <!-- Start of ChatBot (www.chatbot.com) code -->

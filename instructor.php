@@ -126,7 +126,7 @@ $result = $conn->query($sql);
 
               <tr>
                 <td>
-                  <center><img src="img/cikgu/<?php echo $row['instructor_pic_path']; ?>" style="width: 150px; height: 200px; border-radius: 10px;"></center>
+                  <center><img src="resources/img/profile/<?php echo $row['instructor_pic_path']; ?>" style="width: 150px; height: 200px; border-radius: 10px;"></center>
                 </td>
               </tr>
 

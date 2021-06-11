@@ -7,9 +7,9 @@ if (isset($_POST['login'])) {
   $email = $_POST['student_email'];
   $password = $_POST['student_passwod'];
 
-   $sql12 = "SELECT * FROM student WHERE student_email = '". $email ."' AND student_passwod = '". $password ."'";
-   $result = $conn->query($sql12);
-   
+  $sql12 = "SELECT * FROM student WHERE student_email = '" . $email . "' AND student_passwod = '" . $password . "'";
+  $result = $conn->query($sql12);
+
 
   if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
@@ -302,13 +302,16 @@ if (isset($_POST['login'])) {
             <br><br>
             <h1>Login Here!</h1><br><br>
             <label style="float: left; padding-left:45px"><b>Email Address</b></label><br>
-            <input type="email" placeholder="Enter Email Address" name="student_email" required><br>
+            <input id="username" type="email" placeholder="Enter Email Address" name="student_email" required><br>
             <label style="float: left; padding-left:45px"><b>Password</b></label><br>
-            <input type="password" placeholder="Enter Password" name="student_passwod" required><br>
+            <input id="password" type="password" placeholder="Enter Password" name="student_passwod" required><br>
             <button type="submit" name="login" class="loginbtn">NEXT</button>
             <p style="margin-bottom: 15px;">Are staff or instructor? Login <a href="login2.php">here</a></p>
           </form>
+          <button onclick="btn1()" style="width: 50%;" class="loginbtn">Student 1</button>
+          <button onclick="btn2()" style="width: 50%;" class="loginbtn">Student 2</button>
         </div>
+        
       </div>
       <div class="center">
         <div>
@@ -317,10 +320,23 @@ if (isset($_POST['login'])) {
         <div style="margin-top: 20px;">
           <button class="button white test"><a href="register.php">Register Here</a></button>&nbsp;
         </div>
+        
       </div>
+     
 
     </div>
   </div>
+
+  <script>
+    function btn1() {
+      document.getElementById("username").value = "syahmijalil@gmail.com";
+      document.getElementById("password").value = "12345";
+    }
+    function btn2() {
+      document.getElementById("username").value = "ahamd@gmail.com";
+      document.getElementById("password").value = "12345";
+    }
+  </script>
 
 
   <!-- Start of ChatBot (www.chatbot.com) code -->
