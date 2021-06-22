@@ -30,20 +30,6 @@ require 'resources/php/conn.php';
 
     <title>KIDZONE | About Us </title>
 
-    <!-- Start of ChatBot (www.chatbot.com) code -->
-    <script type="text/javascript">
-        window.__be = window.__be || {};
-        window.__be.id = "60adc444ac852f0007859d3f";
-        (function() {
-            var be = document.createElement('script');
-            be.type = 'text/javascript';
-            be.async = true;
-            be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(be, s);
-        })();
-    </script>
-    <!-- End of ChatBot code -->
 
     <style type="text/css">
         .content {
@@ -62,13 +48,13 @@ require 'resources/php/conn.php';
 
 <body>
     <div class="header">
-    <?php include('header.php'); ?>
+        <?php include('header.php'); ?>
     </div>
 
     <div class="body">
         <div class="field" style="margin: 5%;">
             <h1 style="text-align: center;">ABOUT US</h1><br>
-            
+
             <!--Hanis Details-->
             <div class="column" style="margin-bottom: 7%;">
                 <div class="card">
@@ -108,6 +94,21 @@ require 'resources/php/conn.php';
             }
         }
     </script>
+    <!-- Start of ChatBot (www.chatbot.com) code -->
+    <script type="text/javascript">
+        window.__be = window.__be || {};
+        window.__be.id = "60d1623a1270440007224690";
+        (function() {
+            var be = document.createElement('script');
+            be.type = 'text/javascript';
+            be.async = true;
+            be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(be, s);
+        })();
+    </script>
+    <!-- End of ChatBot code -->
+
 
 
 </body>

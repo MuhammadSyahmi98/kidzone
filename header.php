@@ -76,7 +76,7 @@ $currentPath = $currentPath1[0];
             ?>
                 <div class="menu">
             <div class="left">
-                <span class="header-small" style="color: white; font-size: 50px;"><a href="studlogin.php">KIDZONE</a></span>
+                <span class="header-small" style="color: white; font-size: 50px;"><a href="student.php">KIDZONE</a></span>
                 <div id="hamburger" class="hamburger hamburger--spin" onclick="openMenu()">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
@@ -105,7 +105,7 @@ $currentPath = $currentPath1[0];
             <div class="right link" >
 
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Muhammad Syahmi <i class="fas fa-caret-down"></i></button>
+                    <button onclick="myFunction()" class="dropbtn"><?php echo $name100;?> <i class="fas fa-caret-down"></i></button>
                     <div id="myDropdown" class="dropdown-content" >
                         <a style="z-index: 100;"  href="profile.php">My Profile</a>
                         <a style="z-index: 100;"  href="logout.php">Logout</a>
