@@ -315,7 +315,7 @@ if (isset($_POST['login'])) {
 
   <div>
 
-    <div style="margin-top: 8%;">
+    <div style="margin-top: 5%;">
       <div>
         <div class="card" style="margin-top: 20px;">
 
@@ -327,7 +327,8 @@ if (isset($_POST['login'])) {
             <input id="username" type="email" placeholder="Enter Email Address" name="student_email" required><br>
             <label style="float: left; padding-left:45px"><b>Password</b></label><br>
             <input id="password" type="password" placeholder="Enter Password" name="student_passwod" required><br>
-            <button type="submit" name="login" class="loginbtn">NEXT</button>
+            <button type="submit" name="login" class="loginbtn">Login</button>
+            <p>Forgot password? <a href="forgotPassword2.php">Click Here</a></p>
           </form>
           <button style="width: 50%;" onclick="btn1()" class="loginbtn" >Staff 1</button>
           <button style="width: 50%;" onclick="btn2()" class="loginbtn" >Instructor 1</button>

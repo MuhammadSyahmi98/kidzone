@@ -189,6 +189,7 @@ if (isset($_POST['delete_section$i'])) {
         $sql = "UPDATE content SET content_updated = '". $today_date ."' WHERE content_id = ". $content_id ."";
         $conn->query($sql);
         echo "<script>alert('Success Delete Section');
+        window.location.href = 'https://kidzone1.test/instructor/matapelajaran.php?id=". $content_id ."';
         </script>";
     } else {
         echo "Error deleting record: " . $conn->error;
@@ -279,7 +280,7 @@ if (isset($_POST['save'])) {
             <ul class="navbar-nav hk-navbar-content">
                 <li>
 
-                    <button name="save" class="btn btn-primary" style="margin-right: 10px; height: 50%;">Preview</button>
+                    
 
                 </li>
                 <li class="nav-item dropdown dropdown-authentication">

@@ -71,8 +71,8 @@ function email($name, $email, $password)
             <p>Anda telah berjaya didaftarkan untuk menggunakan system eHibah.</p>
             <p>Berikut adalah maklumat akaun anda: </p>
             <p>Nama: ' . htmlspecialchars($name) . '</p>
-            <p>Username:<b> ' . htmlspecialchars($email) . '</b></p>
-            <p>Kata laluan sementara: <b> ' . htmlspecialchars($password) . '</b></p>
+            <p>Email:<b> ' . htmlspecialchars($email) . '</b></p>
+            <p>Kata laluan: <b> ' . htmlspecialchars($password) . '</b></p>
             <p>Anda boleh menggunakan sistem kidzone di <a href="http://localhost/kidzone1/index.php">Di Sini</a></p>
             <p>Terima kasih</p>
             <p>-KIDZONE=</p>
