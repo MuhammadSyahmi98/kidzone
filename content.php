@@ -186,10 +186,11 @@ if (isset($_GET['id'])) {
     <div id="video" class="middle" style="display: none;">
       <div>
         <video style="margin: auto; width: 90% !important; height: auto !important; display:block; padding-bottom: 22px; padding-top: 22px;" controls>
-          <source src="../resources/data/user/<?php echo $instructor_id ?>/<?php echo $_SESSION['content'] ?>/<?php echo $section_vid ?>/<?php echo $video_path ?>" type="video/mp4">
-          <source src="../resources/data/user/<?php echo $instructor_id ?>/<?php echo $_SESSION['content'] ?>/<?php echo $section_vid ?>/<?php echo $video_path ?>" type="video/mkv">
-          Your browser does not support the video tag.
+          <source src="resources/data/user/<?php echo $instructor_id ?>/<?php echo $_SESSION['content'] ?>/<?php echo $section_vid ?>/<?php echo $video_path ?>" type="video/mp4">
+          <source src="resources/data/user/<?php echo $instructor_id ?>/<?php echo $_SESSION['content'] ?>/<?php echo $section_vid ?>/<?php echo $video_path ?>" type="video/mkv">
+         
         </video>
+    
 
       </div>
     </div>
