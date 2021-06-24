@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 22, 2021 at 03:48 AM
+-- Generation Time: Jun 24, 2021 at 06:15 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -44,7 +44,7 @@ CREATE TABLE `content` (
 --
 
 INSERT INTO `content` (`content_id`, `content_img`, `content_subject_name`, `content_level`, `content_description`, `content_created`, `content_updated`, `content_status`, `instructor_id`) VALUES
-(1, 'bm1.png', 'Bahasa Melayu', '1', 'Bahasa Melayu is one of the dialects of the hundreds of other dialects found in Nusantara (the Malay world). Selection of the Malay language as the national language whether in Indonesia, Malaysia and Brunei are not made arbitrarily. It was chosen mainly ', '2021-08-08', '2021-06-10', 'Not Completed', 1),
+(1, 'bm1.png', 'Bahasa Melayu', '1', 'Bahasa Melayu is one of the dialects of the hundreds of other dialects found in Nusantara (the Malay world). Selection of the Malay language as the national language whether in Indonesia, Malaysia and Brunei are not made arbitrarily. It was chosen mainly ', '2021-08-08', '2021-06-24', 'Not Completed', 1),
 (2, 'bi1.jpg', 'Bahasa Inggeris', '1', 'Bahasa Inggeris is a West Germanic language that is the dominant language in the United Kingdom, the United States, most Commonwealth countries including Australia and Canada, and other former British colonies. It is also the dominant or official language', '2021-08-08', '2021-06-10', 'Not Completed', 2),
 (3, 'sc1.jpg', 'Science & Technology', '1', 'Science encompasses the systematic study of the structure and behaviour of the physical and natural world through observation and experiment, and technology is the application of scientific knowledge for practical purposes. ', '2021-08-08', '2021-08-08', 'Not Completed', 3),
 (4, 'pjk1.jpg', 'Physical education and Health', '1', 'Physical Education is education through the physical. It aims to develop students’ physical competence and knowledge of movement and safety, and their ability to use these to perform in a wide range of activities associated with the development of an ac', '2021-08-08', '2021-08-08', 'Not Completed', 4),
@@ -76,7 +76,8 @@ INSERT INTO `content` (`content_id`, `content_img`, `content_subject_name`, `con
 (46, 'ba4.jpg', 'Bahasa Arab', '4', 'Arabic is the language of the Quran. This is one of the main reasons we have to learn Arabic.', '2021-08-08', '2021-08-08', 'Not Completed', 34),
 (47, 'mat4.png', 'Mathematics', '4', 'Mathematics the study of numbers, shapes, and space using reason and usually a special system of symbols and rules for organizing them.', '2021-08-08', '2021-08-08', 'Not Completed', 33),
 (48, 'sc4.jpg', 'Science', '4', 'Science encompasses the systematic study of the structure and behaviour of the physical and natural world through observation and experiment, and technology is the application of scientific knowledge for practical purposes. ', '2021-08-08', '2021-08-08', 'Not Completed', 32),
-(49, 'sej4.png', 'Sejarah', '4', 'History is a branch of science that systematically examines the entire development, process of change or dynamics of society\'s life with all aspects of life that occurred in the past.', '2021-08-08', '2021-08-08', 'Not Completed', 35);
+(49, 'sej4.png', 'Sejarah', '4', 'History is a branch of science that systematically examines the entire development, process of change or dynamics of society\'s life with all aspects of life that occurred in the past.', '2021-08-08', '2021-08-08', 'Not Completed', 35),
+(50, NULL, 'Mathematics', '6', 'This ', '2021-06-23', NULL, 'Not Completed', 1);
 
 -- --------------------------------------------------------
 
@@ -123,7 +124,7 @@ INSERT INTO `instructor` (`instructor_id`, `instructor_name`, `instructor_email`
 (19, 'Qayyum bin Johari', 'qayyum@gmail.com', 'qayyum123', '940123038997', '0134247248', 'The secret in education lies in respecting the student', 'Degree', 'default.png', 'B031810288_mind_mapping_920606023438.pdf'),
 (20, 'Munirah binti Ramli', 'mun@gmail.com', 'mun123', '901201034242', '0174294279', 'Children are likely to live up to what you believe of them', 'Degree', 'default.png', 'B031810288_mind_mapping_920606023438.pdf'),
 (21, 'Roslinda binti Toib', 'linda@gmail.com', 'linda123', '930313023894', '0143852959', 'Intelligence plus character', 'Degree', 'default.png', 'B031810288_mind_mapping_920606023438.pdf'),
-(22, 'Aimi binti Anwar', 'aimi@gmail.com', 'aimi123', '920606023438', '0134353636', 'Great teachers empathize with kids', 'Degree', 'default.png', 'B031810288_mind_mapping_920606023438.pdf'),
+(22, 'Aimi binti Anwar', 'aimi@gmail.com', 'aimi123', '920606023438', '013-232332', 'Great teachers empathize with kids', 'Degree', 'default.png', 'B031810288_mind_mapping_920606023438.pdf'),
 (23, 'Ruwaidah binti Zainal', 'idah@gmail.com', 'idah123', '880406013428', '0182495259', 'One looks back with appreciation to the brilliant teachers.', 'Degree', 'default.png', 'B031810288_mind_mapping_920606023438.pdf'),
 (24, 'Haqiem binti Rusli', 'aqiem@gmail.com', 'aqiem123', '930817023381', '0142748449', 'Education is the passport to the future', 'Degree', 'default.png', 'B031810288_mind_mapping_920606023438.pdf'),
 (25, 'Jaafar bin Daud', 'jekfer@gmail.com', 'jekfer123', '920101045433', '0187627924', 'The good teacher explains', 'Degree', 'default.png', 'B031810288_mind_mapping_920606023438.pdf'),
@@ -158,9 +159,7 @@ CREATE TABLE `resources` (
 --
 
 INSERT INTO `resources` (`resource_id`, `resource_path`, `resource_description`, `resource_created`, `resource_updated`, `section_id`) VALUES
-(16, '1. What Really Matters In This Section_12.mp4', 'Topic Part 1', '2021-06-09', NULL, 12),
-(17, '6. Git Vs. Github What_s The Difference_12.mp4', 'Part 2', '2021-06-09', NULL, 12),
-(18, '6. Git Vs. Github What_s The Difference_13.mp4', 'Par 2', '2021-06-09', NULL, 13);
+(1, '1. What Really Matters In This Section_1.mp4', 'Test', '2021-06-24', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -181,10 +180,7 @@ CREATE TABLE `section` (
 --
 
 INSERT INTO `section` (`section_id`, `section_number`, `section_name`, `section_created`, `content_id`) VALUES
-(12, 1, 'Introduction', '2021-06-09', 1),
-(13, 2, 'Part 2', '2021-06-09', 1),
-(14, 1, 'Part 1', '2021-06-10', 2),
-(15, 3, 'Part 3', '2021-06-10', 1);
+(1, 1, 'Introduction', '2021-06-23', 1);
 
 -- --------------------------------------------------------
 
@@ -207,10 +203,7 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`staff_id`, `staff_name`, `staff_email`, `staff_ic`, `staff_phone_number`, `staff_password`, `staff_pic_path`) VALUES
-(1, 'Muhammad Syahmi Bin Abdul Jalil', 'syahmijalil12@gmail.com', '990422-02-5095', '012-6518626', 'QTJMUiVa', '1482253955_990422-02-5095.jpg'),
-(2, 'Abdul Manan Bin Surpin', 'admin@gmail.com', '600402-01-4734', '012-6518624', 'bpO0JT6l', 'default.png'),
-(3, 'Fatimah Atan', 'admin2@gmail.com', '600402-01-4243', '012-6324535', 'SDQP1Zmq', 'default.png'),
-(5, 'Zaharah Binti Atan', 'attendancesystem.my@gmail.com', '600402-01-4721', '012-6518624', '4SAecIqP', 'default.png');
+(1, 'Muhammad Syahmi Bin Abdul Jalil', 'syahmijalil12@gmail.com', '990422-02-5094', '012-6518626', 'QTJMUiVa', '1482253955_990422-02-5095.jpg');
 
 -- --------------------------------------------------------
 
@@ -233,8 +226,9 @@ CREATE TABLE `student` (
 
 INSERT INTO `student` (`student_id`, `student_name`, `student_email`, `student_passwod`, `student_ic`, `student_date`) VALUES
 (1, 'Ahmad', 'ahamd@gmail.com', '12345', '001202-02-8723', '2021-06-01'),
-(2, 'Muhammad Atan', 'syahmijalil@gmail.com', '12345', '001202-02-8722', '2021-06-10'),
-(3, 'Abdul Jalil', 'abduljalil@gmail.com', '12345', '120202-02-5422', NULL);
+(2, 'Muhammad Atan', 'syahmijalil12@gmail.com', 'Syahmi@12', '001202-02-8722', '2021-06-10'),
+(3, 'Abdul Jalil', 'abduljalil@gmail.com', '12345', '120202-02-5422', '2021-06-10'),
+(4, 'Alia Syahirah', 'yus@gmail.com', 'Syahmi@12', '100123-02-2302', '2021-06-23');
 
 -- --------------------------------------------------------
 
@@ -256,12 +250,9 @@ CREATE TABLE `subject_enrolled` (
 --
 
 INSERT INTO `subject_enrolled` (`subject_enrolled_id`, `subject_enrolled_created`, `subject_enrolled_status`, `subject_enrolled_completed`, `student_id`, `content_id`) VALUES
-(1, '2021-06-09', 'Not Completed', '1', 1, 1),
-(3, '2021-06-09', 'Not Completed', '5', 2, 1),
-(4, '2021-06-10', 'Not Completed', '1', 2, 18),
-(5, '2021-06-22', 'Not Completed', '1', 2, 2),
-(6, '2021-06-22', 'Not Completed', '1', 2, 3),
-(7, '2021-06-22', 'Not Completed', '1', 2, 4);
+(9, '2021-06-22', 'Not Completed', '3', 2, 1),
+(10, '2021-06-24', 'Not Completed', '1', 2, 18),
+(11, '2021-06-24', 'Not Completed', '1', 2, 2);
 
 --
 -- Indexes for dumped tables
@@ -322,7 +313,7 @@ ALTER TABLE `subject_enrolled`
 -- AUTO_INCREMENT for table `content`
 --
 ALTER TABLE `content`
-  MODIFY `content_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `content_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `instructor`
@@ -334,31 +325,31 @@ ALTER TABLE `instructor`
 -- AUTO_INCREMENT for table `resources`
 --
 ALTER TABLE `resources`
-  MODIFY `resource_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `resource_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `section`
 --
 ALTER TABLE `section`
-  MODIFY `section_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `section_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `staff_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `staff_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `subject_enrolled`
 --
 ALTER TABLE `subject_enrolled`
-  MODIFY `subject_enrolled_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `subject_enrolled_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
