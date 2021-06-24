@@ -308,8 +308,15 @@ if (isset($_POST['login'])) {
             <button type="submit" name="login" class="loginbtn">NEXT</button>
             <p style="margin-bottom: 15px;">Are staff or instructor? Login <a href="login2.php">here</a></p>
           </form>
-          <button onclick="btn1()" style="width: 50%;" class="loginbtn">Student 1</button>
-          <button onclick="btn2()" style="width: 50%;" class="loginbtn">Student 2</button>
+          <div class="flex-sb-m w-full p-b-48">
+                <div>
+                  <a href="forgotpassword.php" class="txt3">&nbsp;
+                    Forgot Password?
+                  </a>
+                </div>
+              </div>
+          <!--<button onclick="btn1()" style="width: 50%;" class="loginbtn">Student 1</button>
+          <button onclick="btn2()" style="width: 50%;" class="loginbtn">Student 2</button>-->
         </div>
         
       </div>
