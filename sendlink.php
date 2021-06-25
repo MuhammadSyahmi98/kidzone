@@ -58,7 +58,6 @@ if(isset($_POST['submit_email']) && $_POST['email'])
                                         <br>
                                         <br>
                                         <a style="color:blue" href="localhost/kidzone1/reEnterPassword.php?key='.$email.'&reset='.$salt_pass.'">Reset Your Password</a>
-                                        <a style="color:blue" href="localhost/kidzone1/reEnterPassword.php?key=$email">Reset Your Password</a>
 
                                     </div>
                                     
